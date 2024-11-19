@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+
+  .animate-morph {
+    animation: morph 10s infinite;
+  }
+}
+:root {
+  --white-primary: #f8f9fa;
+  --pink-primary: #ff6481;
+  --light-pink-primary: #fff4f5;
+  --gray-primary: #4d6385;
+  --black-primary: #282424;
+}
+
+*,
+*::before,
+*::after,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: inherit;
+}
+/* Root font size for easy rem calculations (1rem = 10px) */
+html {
+  font-size: 62.5%; /* 10px base font size for easy rem calculations */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem; /* Base font size: 16px */
+  background-color: #fff; /* Default background */
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 300ms ease-out;
+}
+/*----------------------------------------------------*/
+
+.typewriter-text {
+  animation: typewriter 6s steps(220) infinite;
+}
+
+.typewriter-text::before {
+  content: "Frontend Developer";
+  display: inline-block;
+  animation: changeText 12s linear infinite;
+}
+
+@keyframes typewriter {
+  0%,
+  10% {
+    width: 0;
+  }
+  30%,
+  70% {
+    width: 100%;
+  }
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes changeText {
+  0%,
+  49.99% {
+    content: "Frontend Developer";
+  }
+  50%,
+  100% {
+    content: "Mobile Developer";
+  }
+}
