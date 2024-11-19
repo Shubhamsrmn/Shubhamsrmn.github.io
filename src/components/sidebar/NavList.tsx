@@ -4,34 +4,15 @@ import {
   faUser,
 } from "@fortawesome/free-regular-svg-icons";
 import NavElement from "./NavElement";
-import { useSearchParams } from "react-router-dom";
+import { faDiagramProject } from "@fortawesome/free-solid-svg-icons";
 
 const NavList = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const section = searchParams.get("section");
-  const navigateFun = (link: string) => {
-    setSearchParams(`section=${link}`);
-  };
   return (
-    <div className="px-6 py-12 divide-y-[1px] divide-gray-300">
-      <NavElement
-        title="About Me"
-        icon={faUser}
-        isActive={section === "about-us" || !section}
-        onClickHandler={() => navigateFun("about-us")}
-      />
-      <NavElement
-        title="Experience"
-        icon={faAddressCard}
-        isActive={section === "experience"}
-        onClickHandler={() => navigateFun("experience")}
-      />
-      <NavElement
-        title="Contact"
-        icon={faAddressBook}
-        isActive={section === "contact"}
-        onClickHandler={() => navigateFun("contact")}
-      />
+    <div className="px-6 divide-y-[1px] divide-gray-300">
+      <NavElement title="About Me" icon={faUser} link="/" />
+      <NavElement title="Experience" icon={faAddressCard} link="/experiences" />
+      <NavElement title="Projects" icon={faDiagramProject} link="/projects" />
+      <NavElement title="Contact" icon={faAddressBook} link="/contact-me" />
     </div>
   );
 };

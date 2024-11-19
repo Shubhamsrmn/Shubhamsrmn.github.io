@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="">
       <MainHeading title="Follow Me" />
-      <div className="my-12">
+      <div className="my-8">
         <div className="grid grid-cols-3 gap-x-16">
           {socialMedia.map((social: socialMediaType) => (
             <LetTalkContainer
