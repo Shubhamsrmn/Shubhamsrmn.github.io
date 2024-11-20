@@ -1,6 +1,6 @@
 import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import Loader from "./components/common/Loader.tsx";
@@ -15,7 +15,7 @@ const Contacts = lazy(() => import("./pages/Contacts"));
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<App />}>
             <Route
@@ -52,7 +52,7 @@ createRoot(document.getElementById("root")!).render(
             />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </StrictMode>
 );
