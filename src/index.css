@@ -25,6 +25,13 @@
   --gray-primary: #4d6385;
   --black-primary: #282424;
 }
+/* :root {
+  --white-primary: #181a1d; 
+  --pink-primary: #ff4c66; 
+  --light-pink-primary: #2b1f21; 
+  --gray-primary: #aab4c2; 
+  --black-primary: #0e0f10;
+} */
 
 *,
 *::before,

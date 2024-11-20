@@ -18,16 +18,12 @@ const PrimaryBtn: React.FC<props> = ({
     <button
       type="button"
       onClick={onPressHandler}
-      className={`w-full py-4 px-8 rounded-lg flex items-center justify-center gap-4 bg-primaryPink
+      className={`w-full py-4 px-8 rounded-lg flex items-center justify-center gap-4 bg-primaryPink text-primaryWhite
     }`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {children ? (
-        children
-      ) : (
-        <p className="text-[1.6rem] font-semibold">{title}</p>
-      )}
+      {children ? children : <p className="text-[1.6rem] font-bold">{title}</p>}
     </button>
   );
 };

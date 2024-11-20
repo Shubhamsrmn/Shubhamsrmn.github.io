@@ -10,10 +10,11 @@ type props = {
 const NavElement: React.FC<props> = ({ title, icon, link }) => {
   return (
     <NavLink
+      key={link}
       to={link}
       className={({ isActive }) =>
-        `w-full py-4 px-8 rounded-lg flex items-center gap-4 ${
-          isActive ? "bg-primaryPink" : ""
+        `w-full py-4 px-8 rounded-lg flex items-center gap-4 transition-all duration-1000 ${
+          isActive ? "bg-primaryPink text-primaryWhite" : ""
         }`
       }
     >

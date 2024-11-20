@@ -17,7 +17,7 @@ const DownloadResumeBtn = () => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <p className="text-[1.6rem] font-bold line-clamp-1">
+          <p className="text-[1.6rem] font-bold line-clamp-1 text-white">
             Download Resume{" "}
             <FontAwesomeIcon
               icon={faCloudArrowDown}

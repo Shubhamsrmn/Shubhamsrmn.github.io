@@ -1,13 +1,16 @@
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import starIcon from "../../assets/icons/stars.png";
 type props = {
   title: string;
 };
 const MainHeading: React.FC<props> = ({ title }) => {
   return (
-    <strong className="flex items-center gap-2">
-      <FontAwesomeIcon icon={faStar} className="text-primaryPink" size="sm" />
+    <strong className="flex items-center  gap-2">
+      <img
+        src={starIcon}
+        width={22}
+        height={22}
+        alt="star icon with pink as primary color"
+      />
       <span className="text-[2rem] font-bold">{title}</span>
     </strong>
   );
