@@ -16,6 +16,7 @@ const Sidebar = () => {
         boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
       }}
     >
+      <button className="hidden" onClick={() => setOpen(false)}></button>
       {/* {isOpen === false && (
         <button
           type="button"

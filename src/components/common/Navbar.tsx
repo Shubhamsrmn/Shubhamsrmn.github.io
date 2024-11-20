@@ -6,7 +6,10 @@ import { faCloudMoon, faCloudSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Navbar = () => {
   const dispatch = useDispatch();
-  const themeState = useSelector((store) => store.themeState.theme);
+  const themeState = useSelector(
+    (store: { themeState: { theme: "day" | "night" } }) =>
+      store.themeState.theme
+  );
 
   return (
     <div
