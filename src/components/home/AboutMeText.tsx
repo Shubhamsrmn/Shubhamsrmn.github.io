@@ -3,7 +3,7 @@ import WhiteContainer from "../common/WhiteContainer";
 
 const AboutMeText = () => {
   return (
-    <div className="basis-[50%] sticky top-0">
+    <div className="basis-[40%] md:sticky md:top-0">
       <MainHeading title="About Me" />
       <WhiteContainer>
         <div className="p-4">

@@ -5,10 +5,10 @@ import WhiteContainer from "../common/WhiteContainer";
 
 const SkillsContainer = () => {
   return (
-    <div className="basis-[50%]">
-      <MainHeading title="Skills" />
+    <div className="basis-[60%]">
+      <MainHeading title="Skills & Tools" />
       <WhiteContainer>
-        <div className="p-8 grid grid-cols-2 gap-y-16 gap-x-4 h-[60vh] overflow-y-auto">
+        <div className="p-8 grid grid-cols-2 gap-y-16 gap-x-4 md:h-[60vh] overflow-y-auto">
           {skillArr.map((skill: skillItemType) => (
             <SkillsElement
               key={skill.title}

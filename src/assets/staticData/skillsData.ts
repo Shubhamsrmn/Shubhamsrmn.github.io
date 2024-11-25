@@ -12,6 +12,10 @@ import awsIcon from "../images/skills/icons8-aws.svg";
 import androidStudioIcon from "../images/skills/icons8-android-studio.svg";
 import googlePlayIcon from "../images/skills/icons8-google-play.svg";
 import appStoreIcon from "../images/skills/icons8-app-store.svg";
+import nodeIcon from "../images/skills/icons8-nodejs.svg";
+import figmaIcon from "../images/skills/icons8-figma.svg";
+import sassIcon from "../images/skills/icons8-sass.svg";
+import expressIcon from "../images/skills/icons8-express-js.svg";
 
 export type skillItemType = {
   title: string;
@@ -100,16 +104,26 @@ export const skillArr: skillItemType[] = [
   //   color: "rgb(255, 107, 0)", // SQL Orange
   //   image: sqlIcon, // Replace with the actual variable for the SQL icon
   // },
-  // {
-  //   title: "Node.js",
-  //   color: "rgb(139, 195, 74)", // Light green
-  //   image: nodeIcon, // Replace with the actual variable for the Node.js icon
-  // },
-  // {
-  //   title: "Figma",
-  //   color: "rgb(162, 89, 255)", // Lavender purple
-  //   image: figmaIcon, // Replace with the actual variable for the Figma icon
-  // },
+  {
+    title: "Node.js",
+    color: "rgb(139, 195, 74)", // Light green
+    image: nodeIcon, // Replace with the actual variable for the Node.js icon
+  },
+  {
+    title: "Figma",
+    color: "rgb(162, 89, 255)", // Lavender purple
+    image: figmaIcon, // Replace with the actual variable for the Figma icon
+  },
+  {
+    title: "Sass",
+    color: "rgb(204, 102, 153)", // Light magenta
+    image: sassIcon, // Replace with the actual variable for the Sass icon
+  },
+  {
+    title: "Express.js",
+    color: "rgb(99, 99, 99)", // Dark grey
+    image: expressIcon, // Replace with the actual variable for the Express.js icon
+  },
   // {
   //   title: "Docker",
   //   color: "rgb(36, 150, 237)", // Muted blue
