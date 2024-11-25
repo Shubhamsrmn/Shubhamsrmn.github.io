@@ -10,7 +10,7 @@ const SocialLinkElement: React.FC<props> = ({ link, icon }) => {
       <FontAwesomeIcon
         icon={icon}
         border={true}
-        className="aspect-square hover:text-primaryPink mx-2 rounded-full border-gray-300 hover:border-primaryPink"
+        className="aspect-square hover:text-primaryPink mx-2 rounded-full border-gray-300 hover:border-primaryPink transition-all duration-500"
       />
     </a>
   );

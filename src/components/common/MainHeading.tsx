@@ -4,14 +4,16 @@ type props = {
 };
 const MainHeading: React.FC<props> = ({ title }) => {
   return (
-    <strong className="flex items-center  gap-2">
+    <strong className="flex items-center gap-2 my-8 bg-primaryLightPink">
       <img
         src={starIcon}
         width={22}
         height={22}
         alt="star icon with pink as primary color"
       />
-      <span className="text-[2rem] font-bold">{title}</span>
+      <span className="text-[2rem] font-bold hover:text-primaryPink transition-colors duration-500">
+        {title}
+      </span>
     </strong>
   );
 };

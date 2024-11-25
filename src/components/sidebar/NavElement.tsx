@@ -13,8 +13,10 @@ const NavElement: React.FC<props> = ({ title, icon, link }) => {
       key={link}
       to={link}
       className={({ isActive }) =>
-        `w-full py-4 px-8 rounded-lg flex items-center gap-4 transition-all duration-1000 ${
-          isActive ? "bg-primaryPink text-primaryWhite" : ""
+        `w-full py-4 px-8 rounded-lg flex items-center gap-4 transition-all duration-500 ${
+          isActive
+            ? "bg-primaryPink text-primaryWhite"
+            : "hover:text-primaryPink"
         }`
       }
     >

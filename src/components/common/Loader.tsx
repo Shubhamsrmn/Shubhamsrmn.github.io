@@ -1,6 +1,6 @@
 const Loader = () => {
   return (
-    <div className="w-full h-full bg-primaryLightPink flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center">
       <div className="relative loaderAnimate">
         {Array.from({ length: 4 }, (_, idx) => idx).map((_, idx) => (
           <div

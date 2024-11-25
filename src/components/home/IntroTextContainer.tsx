@@ -1,6 +1,6 @@
 const IntroTextContainer = () => {
   return (
-    <div>
+    <div className="">
       <h1 className="text-[4.2rem] font-normal">
         Hey, I'm{" "}
         <strong className="font-medium text-primaryPink">Shubham 👋</strong>

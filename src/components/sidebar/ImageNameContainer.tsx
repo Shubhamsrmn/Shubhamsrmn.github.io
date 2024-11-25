@@ -4,13 +4,14 @@ import SocialLinkElement from "./SocialLinkElement";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 const ImageNameContainer = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <div
-        className="w-[110%] h-[12rem] bg-primaryPink absolute top-0 left-0"
+        className="w-full h-[12rem] bg-primaryPink absolute top-0 left-0"
         style={{
-          clipPath: "polygon(100% 0, 0 0, 0 100%)",
+          clipPath: "polygon(0 0, 100% 0, 100% 10%, 0 100%)",
         }}
       ></div>
+
       <div className="mt-8 mb-4">
         <img
           src={profilePic}

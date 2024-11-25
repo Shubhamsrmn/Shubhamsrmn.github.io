@@ -1,42 +1,37 @@
-import { useState } from "react";
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import DownloadResumeBtn from "./DownloadResumeBtn";
 import ImageNameContainer from "./ImageNameContainer";
 import NavList from "./NavList";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Sidebar = () => {
-  const [isOpen, setOpen] = useState(true);
+type props = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+const Sidebar: React.FC<props> = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`bg-primaryWhite ${
-        isOpen ? "w-[250px] h-screen" : "w-0 h-0"
-      }  z-10 sticky top-0 flex flex-col justify-between`}
+        isOpen ? "min-w-[250px] h-screen" : "hidden"
+      }  z-20 sticky top-0 flex flex-col justify-between overflow-y-auto`}
       style={{
         boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
       }}
     >
-      <button className="hidden" onClick={() => setOpen(false)}></button>
-      {/* {isOpen === false && (
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="px-8 py-4"
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            size="2xl"
-            className="text-primaryPink"
-          />
-        </button>
-      )} */}
-      {/* {isOpen && (
-        <> */}
+      <button
+        className="bg-primaryPink p-2 absolute top-10 right-0 z-10 rounded-s-xl sm:hidden"
+        onClick={() => setIsOpen(false)}
+      >
+        <FontAwesomeIcon
+          icon={faCaretLeft}
+          size="xl"
+          className="text-primaryWhite"
+        />
+      </button>
+
       <ImageNameContainer />
       <NavList />
       <DownloadResumeBtn />
-      {/* </>
-      )} */}
     </div>
   );
 };
