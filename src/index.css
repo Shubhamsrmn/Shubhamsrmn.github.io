@@ -41,7 +41,7 @@ p {
 }
 /* Root font size for easy rem calculations (1rem = 10px) */
 html {
-  font-size: 62.5%; /* 10px base font size for easy rem calculations */
+  font-size: 38%; /* 10px base font size for easy rem calculations */
   scroll-behavior: smooth; /* Smooth scrolling */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,12 +76,12 @@ a {
 /*----------------------------------------------------*/
 @media screen and (min-width: 540px) {
   html {
-    font-size: 60%;
+    font-size: 56%;
   }
 }
 @media screen and (min-width: 768px) {
   html {
-    font-size: 40%;
+    font-size: 48%;
   }
 }
 @media screen and (min-width: 1024px) {

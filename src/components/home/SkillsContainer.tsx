@@ -35,7 +35,7 @@ const SkillsElement: React.FC<prop> = ({ title, image, color }) => {
       className="rounded-full border-2 flex items-center justify-evenly gap-6 py-3 px-6"
       style={{ borderColor: color, backgroundColor: rgbToRgba(color) }}
     >
-      <img src={image} width={48} />
+      <img src={image} width={48} className="w-[4.8rem]" />
       <div>
         <span className="block text-[2.4rem] font-bold">94%</span>
         <span className="font-semibold line-clamp-1">{title}</span>

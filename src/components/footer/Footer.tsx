@@ -7,9 +7,9 @@ import LetTalkContainer from "./LetTalkContainer";
 
 const Footer = () => {
   return (
-    <div className="px-16 py-8">
+    <div className="px-16 py-8 max-sm:px-12 max-sm:py-6 max-xs:px-8 max-xs:py-4">
       <MainHeading title="Follow Me" />
-      <div className="grid grid-cols-3 gap-x-16">
+      <div className="grid grid-cols-3 gap-x-16 max-xs:grid-cols-2">
         {socialMedia.map((social: socialMediaType) => (
           <LetTalkContainer
             key={social.name}

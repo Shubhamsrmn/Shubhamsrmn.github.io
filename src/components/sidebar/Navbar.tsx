@@ -42,7 +42,12 @@ const Navbar = () => {
             className="-mt-8 text-primaryPink"
           />
         </button>
-        <img src={logo} alt="logo of text SN" width={120} />
+        <img
+          src={logo}
+          alt="logo of text SN"
+          width={120}
+          className="w-[12rem]"
+        />
       </div>
       <div className="w-max flex items-center gap-8">
         <button type="button" onClick={() => dispatch(toggleTheme(themeState))}>

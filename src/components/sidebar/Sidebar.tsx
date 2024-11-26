@@ -17,7 +17,7 @@ const Sidebar: React.FC<props> = ({ sidebar }) => {
     <div
       className={`bg-primaryWhite ${
         sidebar
-          ? `min-w-[250px] h-screen ${
+          ? `min-w-[250px] max-sm1:min-w-[200px] h-screen ${
               sidebar === 1 ? "fixed" : "sticky"
             } top-0 left-0`
           : "hidden"

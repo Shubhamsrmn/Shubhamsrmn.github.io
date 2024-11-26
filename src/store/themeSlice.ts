@@ -1,10 +1,10 @@
-const initialState: {
-  theme: "day" | "night";
-  sidebar: 0 | 1 | 2;
-} = {
+import { themeStateType } from "./storeStateType";
+
+const initialState: themeStateType = {
   theme: "day",
   sidebar: window.innerWidth > 768 ? 2 : 0,
 };
+
 const nightTheme = "NightTheme";
 const dayTheme = "DayTheme";
 const sidebarOpen = "OpenSidebar";
