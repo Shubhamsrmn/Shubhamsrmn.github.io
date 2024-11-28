@@ -14,7 +14,9 @@ function App() {
     <div className="font-urbanist tracking-wide text-primaryTextBlack flex justify-between">
       <Sidebar sidebar={sidebar} />
       <div
-        className={`flex-1 bg-primaryLightPink flex flex-col justify-between`}
+        className={`flex-1 bg-primaryLightPink flex flex-col justify-between ${
+          sidebar === 1 ? "overflow-hidden" : ""
+        }`}
       >
         {sidebar === 1 && <OverlayComponent />}
         <Navbar />

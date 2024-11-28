@@ -7,7 +7,8 @@ import {
   faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../assets/images/SnLogo.svg";
+import logo from "../../assets/images/SNLogo.svg";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const dispatch = useDispatch();
   const themeState = useSelector(
@@ -42,12 +43,14 @@ const Navbar = () => {
             className="-mt-8 text-primaryPink"
           />
         </button>
-        <img
-          src={logo}
-          alt="logo of text SN"
-          width={120}
-          className="w-[12rem]"
-        />
+        <Link to={"/"}>
+          <img
+            src={logo}
+            alt="logo of text SN"
+            width={60}
+            className="w-[4.8rem]"
+          />
+        </Link>
       </div>
       <div className="w-max flex items-center gap-8">
         <button type="button" onClick={() => dispatch(toggleTheme(themeState))}>

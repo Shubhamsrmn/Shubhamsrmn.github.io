@@ -6,11 +6,12 @@ type props = {
 };
 const SocialLinkElement: React.FC<props> = ({ link, icon }) => {
   return (
-    <a href={link} target="_blank" className="">
+    <a href={link} target="_blank">
       <FontAwesomeIcon
         icon={icon}
         border={true}
-        className="aspect-square hover:text-primaryPink mx-2 rounded-full border-gray-300 hover:border-primaryPink transition-all duration-500"
+        size="lg"
+        className="aspect-square hover:text-primaryPink mx-2 rounded-full border-gray-300 hover:border-primaryPink transition-colors duration-500"
       />
     </a>
   );

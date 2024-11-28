@@ -21,117 +21,143 @@ export type skillItemType = {
   title: string;
   color: string;
   image: string;
+  percent: number;
 };
-export const skillArr: skillItemType[] = [
-  {
-    title: "HTML",
-    color: "rgb(247, 141, 167)", // Soft pink
-    image: htmlIcon, // Replace with the actual variable for the HTML icon
-  },
-  {
-    title: "CSS",
-    color: "rgb(126, 201, 242)", // Light blue
-    image: cssIcon, // Replace with the actual variable for the CSS icon
-  },
-  {
-    title: "JavaScript",
-    color: "rgb(247, 223, 138)", // Pale yellow
-    image: jsIcon, // Replace with the actual variable for the JavaScript icon
-  },
+export const skills: skillItemType[] = [
   {
     title: "React",
     color: "rgb(97, 218, 251)", // React logo blue
-    image: reactIcon, // Replace with the actual variable for the React icon
-  },
-  {
-    title: "TypeScript",
-    color: "rgb(49, 120, 198)", // Muted blue
-    image: tsIcon, // Replace with the actual variable for the TypeScript icon
+    image: reactIcon,
+    percent: 90,
   },
 
   {
     title: "Next.js",
     color: "rgb(33, 33, 33)", // Charcoal grey
-    image: nextIcon, // Replace with the actual variable for the Next.js icon
+    image: nextIcon,
+    percent: 85,
   },
   {
-    title: "Redux",
-    color: "rgb(118, 74, 188)", // Soft purple
-    image: reduxIcon, // Replace with the actual variable for the Redux icon
+    title: "JavaScript",
+    color: "rgb(247, 223, 138)", // Pale yellow
+    image: jsIcon,
+    percent: 90,
   },
   {
-    title: "Tailwind CSS",
-    color: "rgb(56, 178, 172)", // Teal
-    image: tailwindIcon, // Replace with the actual variable for the Tailwind CSS icon
-  },
-  {
-    title: "Git/GitHub",
-    color: "rgb(240, 80, 50)", // Muted coral
-    image: gitIcon, // Replace with the actual variable for the Git/GitHub icon
+    title: "TypeScript",
+    color: "rgb(49, 120, 198)", // Muted blue
+    image: tsIcon,
+    percent: 80,
   },
   {
     title: "React Native",
     color: "rgb(0, 122, 255)", // iOS blue
-    image: reactIcon, // Replace with the actual variable for the React Native icon
+    image: reactIcon,
+    percent: 80,
   },
-  {
-    title: "Expo",
-    color: "rgb(33, 33, 33)",
-    image: expoIcon, // Replace with the actual variable for the Expo icon
-  },
-  {
-    title: "Android Studio",
-    color: "rgb(0, 122, 51)", // Android Green
-    image: androidStudioIcon, // Replace with the actual variable for the Android Studio icon
-  },
-  {
-    title: "AWS",
-    color: "rgb(255, 153, 51)", // AWS Orange
-    image: awsIcon, // Replace with the actual variable for the AWS icon
-  },
-  {
-    title: "Google Play Store",
-    color: "rgb(66, 133, 244)", // Google Play Blue
-    image: googlePlayIcon, // Replace with the actual variable for the Google Play Store icon
-  },
-  {
-    title: "App Store",
-    color: "rgb(0, 122, 255)", // Apple Blue (similar to React Native blue)
-    image: appStoreIcon, // Replace with the actual variable for the App Store icon
-  },
-  // {
-  //   title: "SQL",
-  //   color: "rgb(255, 107, 0)", // SQL Orange
-  //   image: sqlIcon, // Replace with the actual variable for the SQL icon
-  // },
+
   {
     title: "Node.js",
     color: "rgb(139, 195, 74)", // Light green
-    image: nodeIcon, // Replace with the actual variable for the Node.js icon
-  },
-  {
-    title: "Figma",
-    color: "rgb(162, 89, 255)", // Lavender purple
-    image: figmaIcon, // Replace with the actual variable for the Figma icon
-  },
-  {
-    title: "Sass",
-    color: "rgb(204, 102, 153)", // Light magenta
-    image: sassIcon, // Replace with the actual variable for the Sass icon
+    image: nodeIcon,
+    percent: 60,
   },
   {
     title: "Express.js",
     color: "rgb(99, 99, 99)", // Dark grey
-    image: expressIcon, // Replace with the actual variable for the Express.js icon
+    image: expressIcon,
+    percent: 50,
   },
-  // {
-  //   title: "Docker",
-  //   color: "rgb(36, 150, 237)", // Muted blue
-  //   image: dockerIcon, // Replace with the actual variable for the Docker icon
-  // },
-  // {
-  //   title: "MongoDB",
-  //   color: "rgb(71, 162, 72)", // Muted green
-  //   image: mongodbIcon, // Replace with the actual variable for the MongoDB icon
-  // },
+  {
+    title: "HTML",
+    color: "rgb(247, 141, 167)", // Soft pink
+    image: htmlIcon,
+    percent: 90,
+  },
+  {
+    title: "CSS",
+    color: "rgb(126, 201, 242)", // Light blue
+    image: cssIcon,
+    percent: 85,
+  },
+
+  {
+    title: "Redux",
+    color: "rgb(118, 74, 188)", // Soft purple
+    image: reduxIcon,
+    percent: 80,
+  },
+  {
+    title: "Tailwind CSS",
+    color: "rgb(56, 178, 172)", // Teal
+    image: tailwindIcon,
+    percent: 90,
+  },
+
+  {
+    title: "Sass",
+    color: "rgb(204, 102, 153)", // Light magenta
+    image: sassIcon,
+    percent: 50,
+  },
 ];
+export const tools: skillItemType[] = [
+  {
+    title: "Git/GitHub",
+    color: "rgb(240, 80, 50)", // Muted coral
+    image: gitIcon,
+    percent: 70,
+  },
+  {
+    title: "AWS",
+    color: "rgb(255, 153, 51)", // AWS Orange
+    image: awsIcon,
+    percent: 50,
+  },
+  {
+    title: "Expo",
+    color: "rgb(33, 33, 33)", // Same as Next.js color
+    image: expoIcon,
+    percent: 90,
+  },
+  {
+    title: "Figma",
+    color: "rgb(162, 89, 255)", // Lavender purple
+    image: figmaIcon,
+    percent: 40,
+  },
+  {
+    title: "Google Play Store",
+    color: "rgb(66, 133, 244)", // Google Play Blue
+    image: googlePlayIcon,
+    percent: 90,
+  },
+  {
+    title: "App Store",
+    color: "rgb(0, 122, 255)", // Apple Blue
+    image: appStoreIcon,
+    percent: 80,
+  },
+  {
+    title: "Android Studio",
+    color: "rgb(0, 122, 51)", // Android Green
+    image: androidStudioIcon,
+    percent: 70,
+  },
+];
+
+// {
+//   title: "Docker",
+//   color: "rgb(36, 150, 237)", // Muted blue
+//   image: dockerIcon, // Replace with the actual variable for the Docker icon
+// },
+// {
+//   title: "MongoDB",
+//   color: "rgb(71, 162, 72)", // Muted green
+//   image: mongodbIcon, // Replace with the actual variable for the MongoDB icon
+// },
+// {
+//   title: "SQL",
+//   color: "rgb(255, 107, 0)", // SQL Orange
+//   image: sqlIcon, // Replace with the actual variable for the SQL icon
+// },
