@@ -4,7 +4,7 @@ type props = {
 };
 const MainHeading: React.FC<props> = ({ title }) => {
   return (
-    <strong className="flex items-center gap-2 my-8 bg-primaryLightPink">
+    <strong className="flex items-center gap-2 bg-primaryLightPink mb-6">
       <img
         src={starIcon}
         width={22}

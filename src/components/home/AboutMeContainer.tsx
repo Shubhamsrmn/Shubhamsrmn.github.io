@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const AboutMeContainer = () => {
   return (
-    <div className="my-8">
+    <>
       <Container title="About Me">
         <h4 className="font-semibold text-[2.6rem] leading-[3.2rem] mb-8 text-pretty">
           The Solo Dev Powerhouse: From Concept to Deployment 🚀
@@ -58,7 +58,7 @@ const AboutMeContainer = () => {
           </p>
         </Container>
       </div>
-    </div>
+    </>
   );
 };
 

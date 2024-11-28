@@ -4,14 +4,20 @@ import WhiteContainer from "../common/WhiteContainer";
 type props = {
   title: string;
   children: ReactNode;
+  withBg?: boolean;
 };
-const Container: React.FC<props> = ({ title, children }) => {
+
+const Container: React.FC<props> = ({ title, children, withBg = true }) => {
   return (
-    <div className="flex-1 my-8">
+    <div className="flex-1">
       <MainHeading title={title} />
-      <WhiteContainer>
-        <div className="p-4">{children}</div>
-      </WhiteContainer>
+      {withBg ? (
+        <WhiteContainer>
+          <div className="p-4">{children}</div>
+        </WhiteContainer>
+      ) : (
+        <div className="">{children}</div>
+      )}
     </div>
   );
 };

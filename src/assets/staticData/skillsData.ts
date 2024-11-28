@@ -16,6 +16,10 @@ import nodeIcon from "../images/skills/icons8-nodejs.svg";
 import figmaIcon from "../images/skills/icons8-figma.svg";
 import sassIcon from "../images/skills/icons8-sass.svg";
 import expressIcon from "../images/skills/icons8-express-js.svg";
+import postmanIcon from "../images/skills/icons8-postman-api.svg";
+import dockerIcon from "../images/skills/icons8-docker.svg";
+import testflightIcon from "../images/skills/icons8-testflight.svg";
+import webpackIcon from "../images/skills/icons8-webpack.svg";
 
 export type skillItemType = {
   title: string;
@@ -25,7 +29,7 @@ export type skillItemType = {
 };
 export const skills: skillItemType[] = [
   {
-    title: "React",
+    title: "React.js",
     color: "rgb(97, 218, 251)", // React logo blue
     image: reactIcon,
     percent: 90,
@@ -127,7 +131,7 @@ export const tools: skillItemType[] = [
     percent: 40,
   },
   {
-    title: "Google Play Store",
+    title: "Play Store",
     color: "rgb(66, 133, 244)", // Google Play Blue
     image: googlePlayIcon,
     percent: 90,
@@ -144,13 +148,31 @@ export const tools: skillItemType[] = [
     image: androidStudioIcon,
     percent: 70,
   },
+  {
+    title: "Docker",
+    color: "rgb(0, 123, 193)", // Docker Blue
+    image: dockerIcon, // Replace with your Docker icon
+    percent: 60,
+  },
+  {
+    title: "Postman",
+    color: "rgb(255, 102, 0)", // Postman Orange
+    image: postmanIcon, // Replace with your Postman icon
+    percent: 75,
+  },
+  {
+    title: "TestFlight",
+    color: "rgb(0, 122, 255)", // Postman Orange
+    image: testflightIcon, // Replace with your Postman icon
+    percent: 75,
+  },
+  {
+    title: "Webpack",
+    color: "rgb(142, 214, 251)", // Webpack Light Blue
+    image: webpackIcon, // Replace with your Webpack icon
+    percent: 50,
+  },
 ];
-
-// {
-//   title: "Docker",
-//   color: "rgb(36, 150, 237)", // Muted blue
-//   image: dockerIcon, // Replace with the actual variable for the Docker icon
-// },
 // {
 //   title: "MongoDB",
 //   color: "rgb(71, 162, 72)", // Muted green
