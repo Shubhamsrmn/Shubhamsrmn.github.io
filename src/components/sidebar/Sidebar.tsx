@@ -16,10 +16,12 @@ const Sidebar: React.FC<props> = ({ sidebar }) => {
   return (
     <div
       className={`bg-primaryWhite ${
-        sidebar ? "w-[25rem] translate-x-0" : "w-0 -translate-x-full"
-      } ${
-        sidebar === 1 ? "fixed" : "sticky"
-      } h-[100dvh] top-0 left-0 z-20 flex flex-col justify-between overflow-hidden transition-[width,transform] duration-300 ease-out overflow-y-auto`}
+        sidebar
+          ? `w-[250px] max-sm1:w-[200px] 2xl:w-[350px] translate-x-0 ${
+              sidebar === 1 ? "fixed" : "sticky"
+            } top-0 left-0`
+          : "-translate-x-full fixed"
+      } h-[100dvh] z-20 flex flex-col justify-between overflow-y-auto transition-[transform] duration-500 ease-in-out`}
       style={{
         boxShadow: sidebar ? "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" : "none",
       }}

@@ -5,6 +5,7 @@ import Navbar from "./components/sidebar/Navbar";
 import { useSelector } from "react-redux";
 import { mainStoreType } from "./store/storeStateType";
 import OverlayComponent from "./components/common/OverlayComponent";
+import ThemeHandler from "./components/common/ThemeHandler";
 function App() {
   const sidebar = useSelector(
     (state: mainStoreType) => state.themeState.sidebar
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="font-urbanist tracking-wide text-primaryTextBlack flex justify-between">
+      <ThemeHandler />
       <Sidebar sidebar={sidebar} />
       <div
         className={`flex-1 bg-primaryLightPink flex flex-col justify-between ${

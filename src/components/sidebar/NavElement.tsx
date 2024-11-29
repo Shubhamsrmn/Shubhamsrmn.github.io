@@ -21,7 +21,7 @@ const NavElement: React.FC<props> = ({ title, icon, link }) => {
       }
     >
       <FontAwesomeIcon icon={icon} />
-      <p className="text-[1.6rem] font-semibold">{title}</p>
+      <p className="text-[1.7rem] font-semibold">{title}</p>
     </NavLink>
   );
 };

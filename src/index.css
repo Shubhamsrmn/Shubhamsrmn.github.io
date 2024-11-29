@@ -9,13 +9,6 @@
   --gray-primary: #4d6385;
   --black-primary: #282424;
 }
-/* :root {
-  --white-primary: #181a1d; 
-  --pink-primary: #ff4c66; 
-  --light-pink-primary: #2b1f21; 
-  --gray-primary: #aab4c2; 
-  --black-primary: #0e0f10;
-} */
 
 *,
 *::before,
@@ -41,7 +34,7 @@ p {
 }
 /* Root font size for easy rem calculations (1rem = 10px) */
 html {
-  font-size: 38%; /* 10px base font size for easy rem calculations */
+  font-size: 42%; /* 10px base font size for easy rem calculations */
   scroll-behavior: smooth; /* Smooth scrolling */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -97,104 +90,5 @@ a {
 @media screen and (min-width: 1441px) {
   html {
     font-size: 100%;
-  }
-}
-/*----------------------------------------------------*/
-@layer utilities {
-  @keyframes morph {
-    0% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-    100% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-  }
-
-  .animate-morph {
-    animation: morph 10s infinite;
-  }
-}
-/*----------------------------------------------------*/
-.typewriter-text {
-  animation: typewriter 6s steps(220) infinite;
-}
-
-.typewriter-text::before {
-  content: "Frontend Developer";
-  display: inline-block;
-  animation: changeText 12s linear infinite;
-}
-
-@keyframes typewriter {
-  0%,
-  10% {
-    width: 0;
-  }
-  30%,
-  70% {
-    width: 100%;
-  }
-  90%,
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes changeText {
-  0%,
-  49.99% {
-    content: "Frontend Developer";
-  }
-  50%,
-  100% {
-    content: "Mobile Developer";
-  }
-}
-/* -------------------------loader------------------------ */
-.loaderAnimate {
-  animation: loaderSpin 2s linear infinite;
-}
-.circle:nth-child(1) {
-  top: 0;
-  left: 0;
-}
-.circle:nth-child(2) {
-  top: 0;
-  right: 0;
-}
-.circle:nth-child(3) {
-  bottom: 0;
-  left: 0;
-}
-.circle:nth-child(4) {
-  bottom: 0;
-  right: 0;
-}
-@keyframes loaderSpin {
-  0% {
-    transform: scale(1) rotate(0);
-  }
-
-  20%,
-  25% {
-    transform: scale(1.3) rotate(90deg);
-  }
-
-  45%,
-  50% {
-    transform: scale(1) rotate(180deg);
-  }
-
-  70%,
-  75% {
-    transform: scale(1.3) rotate(270deg);
-  }
-
-  95%,
-  100% {
-    transform: scale(1) rotate(360deg);
   }
 }

@@ -44,7 +44,7 @@ const PrimaryBtn: React.FC<props> = ({
         if (onMouseLeave) onMouseLeave();
       }}
     >
-      <p className="text-[1.6rem] font-bold line-clamp-1">
+      <p className="text-[1.7rem] font-bold line-clamp-1">
         {title}
         {icon && (
           <FontAwesomeIcon icon={icon} className="ml-2" {...animationProps} />

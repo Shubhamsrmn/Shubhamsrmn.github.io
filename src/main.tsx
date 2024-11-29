@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./index.css";
+import "./animation.css";
 import App from "./App.tsx";
 import store from "./store/store.ts";
 import routes from "./pages/routes.ts";

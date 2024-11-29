@@ -4,10 +4,11 @@ import { toggleSidebar, toggleTheme } from "../../store/themeSlice";
 import {
   faCloudMoon,
   faCloudSun,
-  faEllipsisH,
+  faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../assets/images/SNLogo.svg";
+import menuIcon from "../../assets/icons/menu-navigation-grid-1529-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -21,26 +22,17 @@ const Navbar = () => {
       className="sticky top-0 bg-primaryWhite p-6 mb-16 flex justify-between z-10"
       style={{ boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px" }}
     >
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-center gap-6">
         <button
           type="button"
           className="md:hidden flex flex-col items-center justify-center"
           onClick={() => dispatch(toggleSidebar(0))}
         >
-          <FontAwesomeIcon
-            icon={faEllipsisH}
-            size="2xl"
-            className="text-primaryPink"
-          />
-          <FontAwesomeIcon
-            icon={faEllipsisH}
-            size="2xl"
-            className="-mt-8 text-primaryPink"
-          />
-          <FontAwesomeIcon
-            icon={faEllipsisH}
-            size="2xl"
-            className="-mt-8 text-primaryPink"
+          <img
+            src={menuIcon}
+            width={60}
+            about="menu icon"
+            className="w-[4.2rem]"
           />
         </button>
         <Link to={"/"}>
@@ -66,7 +58,9 @@ const Navbar = () => {
           />
         </button>
 
-        <PrimaryBtn title="Hire Me" />
+        <a href="mailto:shubhamnanaware0294@gmail.com" target="_blank">
+          <PrimaryBtn title="Hire Me" icon={faUserTie} />
+        </a>
       </div>
     </div>
   );

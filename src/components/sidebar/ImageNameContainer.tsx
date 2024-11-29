@@ -20,8 +20,10 @@ const ImageNameContainer = () => {
         />
       </div>
       <div className="text-center">
-        <h5 className="text-[2rem] font-semibold">Shubham Nanaware</h5>
-        <p className="font-medium opacity-75">Frontend Developer</p>
+        <h5 className="text-[2.2rem] font-semibold">Shubham Nanaware</h5>
+        <p className="font-medium opacity-75 text-[1.7rem]">
+          Frontend Developer
+        </p>
       </div>
       <div className="flex items-center justify-center gap-4 py-6">
         <SocialLinkElement
