@@ -48,7 +48,7 @@ const Navbar = () => {
             src={logo}
             alt="logo of text SN"
             width={60}
-            className="w-[4.8rem]"
+            className="w-[4.4rem]"
           />
         </Link>
       </div>

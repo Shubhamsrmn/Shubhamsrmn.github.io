@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Container from "./Container";
+import PrimaryBtn from "../common/PrimaryBtn";
 
 const AboutMeContainer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Container title="About Me">
@@ -38,6 +40,13 @@ const AboutMeContainer = () => {
             Next.js and built a React Native app, deploying it on both Google
             Play and Apple App Store.
           </p>
+          <div className="w-max mt-8">
+            <PrimaryBtn
+              title="Show Me"
+              bg="no"
+              onPressHandler={() => navigate("/experiences")}
+            />
+          </div>
         </Container>
 
         <Container title="Education">
@@ -56,6 +65,13 @@ const AboutMeContainer = () => {
           <p className="text-[1.5rem] leading-[2.6rem]">
             Graduated with First Class Distinction CGPA: 7.93.
           </p>
+          <div className="w-max mt-8">
+            <PrimaryBtn
+              title="Show Me"
+              bg="no"
+              onPressHandler={() => navigate("/education")}
+            />
+          </div>
         </Container>
       </div>
     </>

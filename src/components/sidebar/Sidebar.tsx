@@ -16,14 +16,12 @@ const Sidebar: React.FC<props> = ({ sidebar }) => {
   return (
     <div
       className={`bg-primaryWhite ${
-        sidebar
-          ? `min-w-[250px] max-sm1:min-w-[200px] h-screen ${
-              sidebar === 1 ? "fixed" : "sticky"
-            } top-0 left-0`
-          : "hidden"
-      }  z-20 flex flex-col justify-between overflow-y-auto`}
+        sidebar ? "w-[25rem] translate-x-0" : "w-0 -translate-x-full"
+      } ${
+        sidebar === 1 ? "fixed" : "sticky"
+      } h-[100dvh] top-0 left-0 z-20 flex flex-col justify-between overflow-hidden transition-[width,transform] duration-300 ease-out overflow-y-auto`}
       style={{
-        boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+        boxShadow: sidebar ? "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" : "none",
       }}
     >
       <button

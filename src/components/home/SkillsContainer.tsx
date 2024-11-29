@@ -30,7 +30,7 @@ const SkillsElement: React.FC<skillItemType> = ({
 
   return (
     <div
-      className="w-[14rem] h-[14rem] rounded-xl hover:shadow-2xl transition-[shadow,transform] duration-300 ease-in relative hover:scale-110"
+      className="flex-1 px-12 h-[14rem] rounded-xl hover:shadow-2xl transition-[shadow,transform] duration-300 ease-in relative hover:scale-110"
       style={{
         backgroundColor: rgbToRgba(color, 0.1),
       }}
