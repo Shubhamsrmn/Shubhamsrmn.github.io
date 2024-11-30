@@ -21,7 +21,7 @@ function App() {
         }`}
         style={{
           height: sidebar === 1 ? "100dvh" : "",
-          minHeight: sidebar === 2 ? "100dvh" : "",
+          minHeight: sidebar === 2 ? "100dvh" : "100dvh",
         }}
       >
         {sidebar === 1 && <OverlayComponent />}

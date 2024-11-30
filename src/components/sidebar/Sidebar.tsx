@@ -6,13 +6,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 import { toggleSidebar } from "../../store/themeSlice";
 import useResponsiveSidebar from "../../utils/hooks/useResponsiveSidebar";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 type props = {
   sidebar: 0 | 1 | 2;
 };
 const Sidebar: React.FC<props> = ({ sidebar }) => {
   const dispatch = useDispatch();
-
+  const location = useLocation();
+  const pathname = location.pathname;
   useResponsiveSidebar(sidebar);
+  useEffect(() => {
+    if (sidebar === 1) dispatch(toggleSidebar(1));
+  }, [pathname, dispatch]);
+
   return (
     <div
       className={`bg-primaryWhite ${

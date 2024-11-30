@@ -11,7 +11,7 @@ const MainHeading: React.FC<props> = ({ title }) => {
         height={22}
         alt="star icon with pink as primary color"
       />
-      <span className="text-[2rem] font-bold hover:text-primaryPink transition-colors duration-500">
+      <span className="text-[2.2rem] font-bold hover:text-primaryPink transition-colors duration-500">
         {title}
       </span>
     </strong>

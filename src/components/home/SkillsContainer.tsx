@@ -7,13 +7,7 @@ const SkillsContainer = () => {
     <Container title="Skills" withBg={false}>
       <div className="flex items-center justify-start flex-wrap gap-x-8 gap-y-12 max-lg:grid-cols-3 max-md:grid-cols-2">
         {skills.map((skill: skillItemType) => (
-          <SkillsElement
-            key={skill.title}
-            title={skill.title}
-            image={skill.image}
-            color={skill.color}
-            percent={skill.percent}
-          />
+          <SkillsElement key={skill.title} {...skill} />
         ))}
       </div>
     </Container>

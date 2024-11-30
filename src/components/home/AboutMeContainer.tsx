@@ -10,7 +10,7 @@ const AboutMeContainer = () => {
         <h4 className="font-semibold text-[2.6rem] leading-[3.2rem] mb-8 text-pretty">
           The Solo Dev Powerhouse: From Concept to Deployment 🚀
         </h4>
-        <p className="text-[1.5rem] leading-[2.6rem] mb-4">
+        <p className="mb-4">
           I'm Shubham Nanaware, a Frontend Developer passionate about creating
           seamless digital experiences. With over two years of experience, I
           specialize in building high-performance web and mobile applications
@@ -29,24 +29,25 @@ const AboutMeContainer = () => {
               Dec 2022 - Nov 2024
             </span>
           </h4>
-          <Link to={"https://markytics.com"} target="_blank">
-            <h5 className="font-semibold text-[1.8rem] mb-6 text-pretty">
-              Markytics
-            </h5>
+          <Link
+            to={"https://markytics.com"}
+            target="_blank"
+            className="border-primaryTextBlack w-max font-semibold text-[1.7rem] text-pretty leading-[0rem] hover:border-b-2 pb-1"
+          >
+            Markytics
           </Link>
 
-          <p className="text-[1.5rem] leading-[2.6rem]">
+          <p className="mt-6">
             As a Frontend Developer at Markytics, I migrated Django templates to
             Next.js and built a React Native app, deploying it on both Google
             Play and Apple App Store.
           </p>
-          <div className="w-max mt-8">
-            <PrimaryBtn
-              title="Show Me"
-              bg="no"
-              onPressHandler={() => navigate("/experiences")}
-            />
-          </div>
+          <PrimaryBtn
+            title="Show Me"
+            bg="no"
+            onPressHandler={() => navigate("/experiences")}
+            containerStyle="w-max mt-8 ml-auto"
+          />
         </Container>
 
         <Container title="Education">
@@ -56,22 +57,23 @@ const AboutMeContainer = () => {
               Aug 2018 - Jul 2022
             </span>
           </h4>
-          <Link to={"https://mescoe.mespune.org"} target="_blank">
-            <h5 className="font-semibold text-[1.8rem] mb-4 text-pretty">
-              Modern Education Society’s Wadia College of Engineering, Pune
-              University
-            </h5>
+          <Link
+            to={"https://mescoe.mespune.org"}
+            target="_blank"
+            className="border-primaryTextBlack w-max font-semibold text-[1.7rem] text-pretty leading-[0rem] hover:border-b-2 pb-1"
+          >
+            Modern Education Society’s Wadia College of Engineering, Pune
+            University
           </Link>
-          <p className="text-[1.5rem] leading-[2.6rem]">
+          <p className="mt-6">
             Graduated with First Class Distinction CGPA: 7.93.
           </p>
-          <div className="w-max mt-8">
-            <PrimaryBtn
-              title="Show Me"
-              bg="no"
-              onPressHandler={() => navigate("/education")}
-            />
-          </div>
+          <PrimaryBtn
+            title="Show Me"
+            bg="no"
+            onPressHandler={() => navigate("/education")}
+            containerStyle="w-max mt-8 ml-auto"
+          />
         </Container>
       </div>
     </>

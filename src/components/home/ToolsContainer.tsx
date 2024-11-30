@@ -6,14 +6,8 @@ const ToolsContainer = () => {
   return (
     <Container title="Tools" withBg={false}>
       <div className="flex items-center justify-between flex-wrap gap-x-4 gap-y-12 max-lg:grid-cols-3 max-md:grid-cols-2">
-        {tools.map((skill: skillItemType) => (
-          <ToolsElement
-            key={skill.title}
-            title={skill.title}
-            image={skill.image}
-            color={skill.color}
-            percent={skill.percent}
-          />
+        {tools.map((tool: skillItemType) => (
+          <ToolsElement key={tool.title} {...tool} />
         ))}
       </div>
     </Container>
