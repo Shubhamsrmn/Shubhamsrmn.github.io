@@ -3,7 +3,6 @@ import {
   faDiagramProject,
   faGraduationCap,
   faUserAlt,
-  faAddressBook,
   faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +13,6 @@ const NavList = () => {
       <NavElement title="Experience" icon={faAddressCard} link="/experiences" />
       <NavElement title="Projects" icon={faDiagramProject} link="/projects" />
       <NavElement title="Education" icon={faGraduationCap} link="/education" />
-      <NavElement title="Contact" icon={faAddressBook} link="/contact-me" />
     </div>
   );
 };
