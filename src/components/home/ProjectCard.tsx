@@ -27,7 +27,7 @@ const ProjectCard: React.FC<projectItemType> = ({
       <img
         src={image}
         alt={title}
-        className="rounded-t-2xl h-[24rem] w-full aspect-video"
+        className="rounded-t-2xl h-[24rem] w-full aspect-video object-cover object-top"
       />
       <div className="p-4">
         <h5 className="text-[1.8rem] font-semibold line-clamp-1 mb-4">

@@ -1,6 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Container from "./Container";
 import PrimaryBtn from "../common/PrimaryBtn";
+import TitleValueWithDateContainer from "../common/TitleValueWithDateContainer";
 
 const AboutMeContainer = () => {
   const navigate = useNavigate();
@@ -23,57 +24,38 @@ const AboutMeContainer = () => {
       </Container>
       <div className="flex justify-center gap-12 max-md:flex-col">
         <Container title="Experience">
-          <h4 className="font-semibold text-[2.2rem] leading-[3.2rem] mb-2 text-pretty flex items-center justify-between">
-            Frontend Developer
-            <span className="text-[1.4rem] text-primaryTextGray font-medium">
-              Dec 2022 - Nov 2024
-            </span>
-          </h4>
-          <Link
-            to={"https://markytics.com"}
-            target="_blank"
-            className="border-primaryTextBlack w-max font-semibold text-[1.7rem] text-pretty leading-[0rem] hover:border-b-2 pb-1"
+          <TitleValueWithDateContainer
+            title="Frontend Developer"
+            valueName="Markytics"
+            valueLink="https://markytics.com"
+            valueText="As a Frontend Developer at Markytics, I migrated Django templates to Next.js and built a React Native app, deploying it on both Google
+            Play and Apple App Store."
+            date="Dec 2022 - Nov 2024"
           >
-            Markytics
-          </Link>
-
-          <p className="mt-6">
-            As a Frontend Developer at Markytics, I migrated Django templates to
-            Next.js and built a React Native app, deploying it on both Google
-            Play and Apple App Store.
-          </p>
-          <PrimaryBtn
-            title="Show Me"
-            bg="no"
-            onPressHandler={() => navigate("/experiences")}
-            containerStyle="w-max mt-8 ml-auto"
-          />
+            <PrimaryBtn
+              title="Show Me"
+              bg="no"
+              onPressHandler={() => navigate("/experiences")}
+              containerStyle="w-max mt-8 ml-auto"
+            />
+          </TitleValueWithDateContainer>
         </Container>
 
         <Container title="Education">
-          <h4 className="font-semibold text-[2.2rem] leading-[3.2rem] mb-2 text-pretty flex items-center justify-between">
-            Bachelor of Engineering
-            <span className="text-[1.4rem] text-primaryTextGray font-medium">
-              Aug 2018 - Jul 2022
-            </span>
-          </h4>
-          <Link
-            to={"https://mescoe.mespune.org"}
-            target="_blank"
-            className="border-primaryTextBlack w-max font-semibold text-[1.7rem] text-pretty leading-[0rem] hover:border-b-2 pb-1"
+          <TitleValueWithDateContainer
+            title="Bachelor of Engineering"
+            valueName="Modern Education Society’s Wadia College of Engineering, Pune University"
+            valueLink="https://mescoe.mespune.org"
+            valueText="Graduated with First Class Distinction CGPA: 7.93."
+            date="Aug 2018 - Jul 2022"
           >
-            Modern Education Society’s Wadia College of Engineering, Pune
-            University
-          </Link>
-          <p className="mt-6">
-            Graduated with First Class Distinction CGPA: 7.93.
-          </p>
-          <PrimaryBtn
-            title="Show Me"
-            bg="no"
-            onPressHandler={() => navigate("/education")}
-            containerStyle="w-max mt-8 ml-auto"
-          />
+            <PrimaryBtn
+              title="Show Me"
+              bg="no"
+              onPressHandler={() => navigate("/education")}
+              containerStyle="w-max mt-8 ml-auto"
+            />
+          </TitleValueWithDateContainer>
         </Container>
       </div>
     </>
