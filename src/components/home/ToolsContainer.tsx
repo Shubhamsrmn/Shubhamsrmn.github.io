@@ -5,9 +5,15 @@ import Container from "./Container";
 const ToolsContainer = () => {
   return (
     <Container title="Tools" withBg={false}>
-      <div className="flex items-center justify-between flex-wrap gap-x-4 gap-y-12 max-lg:grid-cols-3 max-md:grid-cols-2">
-        {tools.map((tool: skillItemType) => (
-          <ToolsElement key={tool.title} {...tool} />
+      <div
+        className="relative h-[14rem] overflow-hidden"
+        style={{
+          maskImage:
+            "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))",
+        }}
+      >
+        {tools.map((tool: skillItemType, index: number) => (
+          <ToolsElement key={tool.title} index={index} {...tool} />
         ))}
       </div>
     </Container>
@@ -15,17 +21,22 @@ const ToolsContainer = () => {
 };
 
 export default ToolsContainer;
-const ToolsElement: React.FC<skillItemType> = ({ title, image, color }) => {
+const ToolsElement: React.FC<skillItemType & { index: number }> = ({
+  title,
+  image,
+  color,
+  index,
+}) => {
   return (
     <div
-      className="w-[14rem] h-[14rem] rounded-full hover:shadow-2xl transition-[shadow,transform] duration-300 ease-in hover:scale-110 px-2"
+      className="w-[14rem] h-full rounded-full absolute top-0 toolElements"
       style={{
         backgroundColor: rgbToRgba(color, 0.1),
+        animationDelay: `calc(20s / 11 * (11 - ${index}) * -1)`,
       }}
     >
       <div className="w-full h-full flex flex-col items-center justify-center gap-1">
         <img src={image} alt={title} width={48} className="w-[4.8rem]" />
-
         <span className="font-semibold line-clamp-1">{title}</span>
       </div>
     </div>

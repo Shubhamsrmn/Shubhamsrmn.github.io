@@ -95,3 +95,31 @@
     transform: scale(1) rotate(360deg);
   }
 }
+@keyframes slideRightToLeftSkill {
+  from {
+    left: max(calc(20rem * 12), 100%);
+  }
+  to {
+    left: -20rem;
+  }
+}
+@keyframes slideRightToLeftTool {
+  from {
+    left: max(calc(14rem * 11), 100%);
+  }
+  to {
+    left: -14rem;
+  }
+}
+.skillElements {
+  animation-name: slideRightToLeftSkill;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.toolElements {
+  animation-name: slideRightToLeftTool;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

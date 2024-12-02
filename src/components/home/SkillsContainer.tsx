@@ -5,62 +5,38 @@ import Container from "./Container";
 const SkillsContainer = () => {
   return (
     <Container title="Skills" withBg={false}>
-      <div className="flex items-center justify-start flex-wrap gap-x-8 gap-y-12 max-lg:grid-cols-3 max-md:grid-cols-2">
-        {skills.map((skill: skillItemType) => (
-          <SkillsElement key={skill.title} {...skill} />
-        ))}
+      <div>
+        <div
+          className="relative h-[14rem] overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))",
+          }}
+        >
+          {skills.map((skill: skillItemType, index: number) => (
+            <SkillsElement key={skill.title} index={index + 1} {...skill} />
+          ))}
+        </div>
       </div>
     </Container>
   );
 };
 export default SkillsContainer;
-const SkillsElement: React.FC<skillItemType> = ({
+const SkillsElement: React.FC<skillItemType & { index: number }> = ({
   title,
   image,
   color,
   percent,
+  index,
 }) => {
-  const adjustedPercent = Math.max(0, Math.min(percent, 100));
-
   return (
     <div
-      className="flex-1 px-12 h-[14rem] rounded-xl hover:shadow-2xl transition-[shadow,transform] duration-300 ease-in relative hover:scale-110"
+      className={`w-[20rem] h-full rounded-xl absolute top-0 skillElements`}
       style={{
         backgroundColor: rgbToRgba(color, 0.1),
+        animationDelay: `calc(30s / 12 * (12 - ${index}) * -1)`,
       }}
     >
-      <div
-        className="w-1 absolute bottom-0 left-0 rounded-full"
-        style={{
-          backgroundColor: color,
-          height: adjustedPercent >= 25 ? "100%" : `${adjustedPercent * 4}%`,
-        }}
-      ></div>
-      <div
-        className="h-1 absolute top-0 left-0 rounded-3xl"
-        style={{
-          backgroundColor: color,
-          width:
-            adjustedPercent >= 50 ? "100%" : `${(adjustedPercent - 25) * 4}%`,
-        }}
-      ></div>
-      <div
-        className="w-1 absolute top-0 right-0 rounded-3xl"
-        style={{
-          backgroundColor: color,
-          height:
-            adjustedPercent >= 75 ? "100%" : `${(adjustedPercent - 50) * 4}%`,
-        }}
-      ></div>
-      <div
-        className="h-1 absolute bottom-0 right-0 rounded-3xl"
-        style={{
-          backgroundColor: color,
-          width:
-            adjustedPercent >= 100 ? "100%" : `${(adjustedPercent - 75) * 4}%`,
-        }}
-      ></div>
-
       <div className="w-full h-full flex flex-col items-center justify-center gap-1">
         <img src={image} alt={title} width={48} className="w-[4.8rem]" />
         <span className="font-bold line-clamp-1">{percent}%</span>
