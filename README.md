@@ -31,5 +31,5 @@ Thanks to the creators of React, Vite, Tailwind CSS, React Router, and Redux for
 
 If you have any questions or need further assistance, feel free to contact me:
 
-[Email] (shubhamnanaware0294@gmail.com)
-[LinkedIn] (https://www.linkedin.com/in/shubham-nanaware-4b0b23211/)
+[Email](shubhamnanaware0294@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/shubham-nanaware-4b0b23211/)
