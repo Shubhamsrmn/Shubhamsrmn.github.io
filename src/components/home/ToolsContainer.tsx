@@ -9,7 +9,7 @@ const ToolsContainer = () => {
         className="relative h-[14rem] overflow-hidden"
         style={{
           maskImage:
-            "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))",
+            "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0))",
         }}
       >
         {tools.map((tool: skillItemType, index: number) => (
@@ -29,7 +29,7 @@ const ToolsElement: React.FC<skillItemType & { index: number }> = ({
 }) => {
   return (
     <div
-      className="w-[14rem] h-full rounded-full absolute top-0 toolElements"
+      className="w-[14rem] h-full rounded-full absolute top-0 toolElements border border-gray-200"
       style={{
         backgroundColor: rgbToRgba(color, 0.1),
         animationDelay: `calc(20s / 11 * (11 - ${index}) * -1)`,

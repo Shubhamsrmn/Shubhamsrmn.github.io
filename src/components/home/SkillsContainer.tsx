@@ -10,7 +10,7 @@ const SkillsContainer = () => {
           className="relative h-[14rem] overflow-hidden"
           style={{
             maskImage:
-              "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))",
+              "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0))",
           }}
         >
           {skills.map((skill: skillItemType, index: number) => (
@@ -31,10 +31,11 @@ const SkillsElement: React.FC<skillItemType & { index: number }> = ({
 }) => {
   return (
     <div
-      className={`w-[20rem] h-full rounded-xl absolute top-0 skillElements`}
+      className={`w-[20rem] h-full rounded-xl absolute top-0 skillElements border border-gray-300`}
       style={{
         backgroundColor: rgbToRgba(color, 0.1),
-        animationDelay: `calc(30s / 12 * (12 - ${index}) * -1)`,
+
+        animationDelay: `calc(60s / 12 * (12 - ${index}) * -1)`,
       }}
     >
       <div className="w-full h-full flex flex-col items-center justify-center gap-1">

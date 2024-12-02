@@ -105,15 +105,15 @@
 }
 @keyframes slideRightToLeftTool {
   from {
-    left: max(calc(14rem * 11), 100%);
+    left: -14rem;
   }
   to {
-    left: -14rem;
+    left: max(calc(14rem * 11), 100%);
   }
 }
 .skillElements {
   animation-name: slideRightToLeftSkill;
-  animation-duration: 30s;
+  animation-duration: 60s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }

@@ -28,18 +28,12 @@ export type skillItemType = {
   percent: number;
 };
 export const skills: skillItemType[] = [
+  // Tier 1: High Priority Skills
   {
     title: "React.js",
     color: "rgb(97, 218, 251)", // React logo blue
     image: reactIcon,
     percent: 90,
-  },
-
-  {
-    title: "Next.js",
-    color: "rgb(33, 33, 33)", // Charcoal grey
-    image: nextIcon,
-    percent: 85,
   },
   {
     title: "JavaScript",
@@ -59,18 +53,17 @@ export const skills: skillItemType[] = [
     image: reactIcon,
     percent: 80,
   },
-
   {
-    title: "Node.js",
-    color: "rgb(139, 195, 74)", // Light green
-    image: nodeIcon,
-    percent: 60,
+    title: "Next.js",
+    color: "rgb(33, 33, 33)", // Charcoal grey
+    image: nextIcon,
+    percent: 85,
   },
   {
-    title: "Express.js",
-    color: "rgb(99, 99, 99)", // Dark grey
-    image: expressIcon,
-    percent: 50,
+    title: "Tailwind CSS",
+    color: "rgb(56, 178, 172)", // Teal
+    image: tailwindIcon,
+    percent: 90,
   },
   {
     title: "HTML",
@@ -85,6 +78,7 @@ export const skills: skillItemType[] = [
     percent: 85,
   },
 
+  // Tier 2: Medium Priority Skills
   {
     title: "Redux",
     color: "rgb(118, 74, 188)", // Soft purple
@@ -92,12 +86,17 @@ export const skills: skillItemType[] = [
     percent: 80,
   },
   {
-    title: "Tailwind CSS",
-    color: "rgb(56, 178, 172)", // Teal
-    image: tailwindIcon,
-    percent: 90,
+    title: "Node.js",
+    color: "rgb(139, 195, 74)", // Light green
+    image: nodeIcon,
+    percent: 60,
   },
-
+  {
+    title: "Express.js",
+    color: "rgb(99, 99, 99)", // Dark grey
+    image: expressIcon,
+    percent: 50,
+  },
   {
     title: "Sass",
     color: "rgb(204, 102, 153)", // Light magenta
@@ -105,19 +104,9 @@ export const skills: skillItemType[] = [
     percent: 50,
   },
 ];
+
 export const tools: skillItemType[] = [
-  {
-    title: "Git/GitHub",
-    color: "rgb(240, 80, 50)", // Muted coral
-    image: gitIcon,
-    percent: 70,
-  },
-  {
-    title: "AWS",
-    color: "rgb(255, 153, 51)", // AWS Orange
-    image: awsIcon,
-    percent: 50,
-  },
+  // Tier 1: High Priority Tools
   {
     title: "Expo",
     color: "rgb(33, 33, 33)", // Same as Next.js color
@@ -125,10 +114,10 @@ export const tools: skillItemType[] = [
     percent: 90,
   },
   {
-    title: "Figma",
-    color: "rgb(162, 89, 255)", // Lavender purple
-    image: figmaIcon,
-    percent: 40,
+    title: "Git/GitHub",
+    color: "rgb(240, 80, 50)", // Muted coral
+    image: gitIcon,
+    percent: 70,
   },
   {
     title: "Play Store",
@@ -142,6 +131,14 @@ export const tools: skillItemType[] = [
     image: appStoreIcon,
     percent: 80,
   },
+
+  // Tier 2: Medium Priority Tools
+  {
+    title: "Postman",
+    color: "rgb(255, 102, 0)", // Postman Orange
+    image: postmanIcon,
+    percent: 75,
+  },
   {
     title: "Android Studio",
     color: "rgb(0, 122, 51)", // Android Green
@@ -149,37 +146,35 @@ export const tools: skillItemType[] = [
     percent: 70,
   },
   {
+    title: "TestFlight",
+    color: "rgb(0, 122, 255)", // TestFlight Blue
+    image: testflightIcon,
+    percent: 75,
+  },
+
+  // Tier 3: Lower Priority Tools
+  {
     title: "Docker",
     color: "rgb(0, 123, 193)", // Docker Blue
-    image: dockerIcon, // Replace with your Docker icon
+    image: dockerIcon,
     percent: 60,
   },
   {
-    title: "Postman",
-    color: "rgb(255, 102, 0)", // Postman Orange
-    image: postmanIcon, // Replace with your Postman icon
-    percent: 75,
+    title: "AWS",
+    color: "rgb(255, 153, 51)", // AWS Orange
+    image: awsIcon,
+    percent: 50,
   },
   {
-    title: "TestFlight",
-    color: "rgb(0, 122, 255)", // Postman Orange
-    image: testflightIcon, // Replace with your Postman icon
-    percent: 75,
+    title: "Figma",
+    color: "rgb(162, 89, 255)", // Lavender purple
+    image: figmaIcon,
+    percent: 40,
   },
   {
     title: "Webpack",
     color: "rgb(142, 214, 251)", // Webpack Light Blue
-    image: webpackIcon, // Replace with your Webpack icon
+    image: webpackIcon,
     percent: 50,
   },
 ];
-// {
-//   title: "MongoDB",
-//   color: "rgb(71, 162, 72)", // Muted green
-//   image: mongodbIcon, // Replace with the actual variable for the MongoDB icon
-// },
-// {
-//   title: "SQL",
-//   color: "rgb(255, 107, 0)", // SQL Orange
-//   image: sqlIcon, // Replace with the actual variable for the SQL icon
-// },
