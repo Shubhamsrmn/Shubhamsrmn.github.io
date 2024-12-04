@@ -1,7 +1,7 @@
 import {
+  faMediumM,
   faSquareFacebook,
   faSquareGithub,
-  faSquareInstagram,
   faSquareWhatsapp,
   faSquareXTwitter,
   faTelegram,
@@ -10,16 +10,10 @@ import {
 
 export type socialMediaType = {
   text?: string;
-  name:
-    | "Whatsapp"
-    | "Instagram"
-    | "Facebook"
-    | "Twitter"
-    | "Github"
-    | "Telegram";
+  name: "Whatsapp" | "Medium" | "Facebook" | "Twitter" | "Github" | "Telegram";
   link: string;
   icon: IconDefinition;
-  iconColor: "#25D366" | "#1877F2" | "#DD2A7B" | "#000000" | "#0088CC";
+  iconColor: "#25D366" | "#1877F2" | "#000000" | "#0088CC";
 };
 export const socialMedia: socialMediaType[] = [
   {
@@ -30,10 +24,10 @@ export const socialMedia: socialMediaType[] = [
     iconColor: "#25D366",
   },
   {
-    name: "Instagram",
-    link: "https://www.instagram.com/shubhamsrmn/profilecard/?igsh=YnQ5NGx1M3BxNWFr",
-    icon: faSquareInstagram,
-    iconColor: "#DD2A7B",
+    name: "Medium",
+    link: "https://medium.com/@shubhamsrmn",
+    icon: faMediumM,
+    iconColor: "#000000",
   },
   {
     name: "Facebook",
